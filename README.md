@@ -7,8 +7,14 @@ inference: false
 ---
 
 # Stable Diffusion v2 Model Card
-This model card focuses on the model associated with the Stable Diffusion v2 model, available [here](https://github.com/Stability-AI/stablediffusion).
-This model is is resumed from [stable-diffusion-2-base](https://huggingface.co/stabilityai/stable-diffusion-2-base) (`512-base-ema.ckpt`) and trained for another 200k steps. Follows the mask-generation strategy presented in [LAMA](https://github.com/saic-mdal/lama) which, in combination with the latent VAE representations of the masked image, are used as an additional conditioning.
+This model card focuses on the model associated with the Stable Diffusion v2, available [here](https://github.com/Stability-AI/stablediffusion).
+
+This `stable-diffusion-2-inpainting` model is is resumed from [stable-diffusion-2-base](https://huggingface.co/stabilityai/stable-diffusion-2-base) (`512-base-ema.ckpt`) and trained for another 200k steps. Follows the mask-generation strategy presented in [LAMA](https://github.com/saic-mdal/lama) which, in combination with the latent VAE representations of the masked image, are used as an additional conditioning.
+
+![image](https://huggingface.co/stabilityai/stable-diffusion-2-inpainting/resolve/main/merged-leopards.png)
+
+- Use it with the [`stablediffusion`](https://github.com/Stability-AI/stablediffusion) repository: download the `512-inpainting-ema.ckpt` [here](https://huggingface.co/stabilityai/stable-diffusion-2-inpainting/resolve/main/512-inpainting-ema.ckpt).
+- Use it with 🧨 diffusers (_coming soon_)
 
 ## Model Details
 - **Developed by:** Robin Rombach, Patrick Esser
