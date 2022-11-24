@@ -28,5 +28,6 @@
   "vae": [
     "diffusers",
     "AutoencoderKL"
-  ]
+ ],
+  "requires_safety_checker": false
 }
