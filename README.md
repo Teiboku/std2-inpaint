@@ -14,7 +14,7 @@ This `stable-diffusion-2-inpainting` model is resumed from [stable-diffusion-2-b
 ![image](https://huggingface.co/stabilityai/stable-diffusion-2-inpainting/resolve/main/merged-leopards.png)
 
 - Use it with the [`stablediffusion`](https://github.com/Stability-AI/stablediffusion) repository: download the `512-inpainting-ema.ckpt` [here](https://huggingface.co/stabilityai/stable-diffusion-2-inpainting/resolve/main/512-inpainting-ema.ckpt).
-- Use it with 🧨 diffusers (_coming soon_)
+- Use it with 🧨 diffusers (https://huggingface.co/stabilityai/stable-diffusion-2-inpainting#Examples)
 
 ## Model Details
 - **Developed by:** Robin Rombach, Patrick Esser
@@ -33,6 +33,42 @@ This `stable-diffusion-2-inpainting` model is resumed from [stable-diffusion-2-b
           year      = {2022},
           pages     = {10684-10695}
       }
+
+## Examples
+
+Using the [🤗's Diffusers library](https://github.com/huggingface/diffusers) to run Stable Diffusion 2 inpainting in a simple and efficient manner.
+
+```bash
+pip install --upgrade git+https://github.com/huggingface/diffusers.git transformers accelerate scipy
+```
+
+```python
+from diffusers import StableDiffusionInpaintPipeline
+pipe = StableDiffusionInpaintPipeline.from_pretrained(
+    "stable-diffusion-2-inpainting",
+    revision="fp16",
+    torch_dtype=torch.float16,
+)
+prompt = "Face of a yellow cat, high resolution, sitting on a park bench"
+#image and mask_image should be PIL images.
+#The mask structure is white for inpainting and black for keeping as is
+image = pipe(prompt=prompt, image=image, mask_image=mask_image).images[0]
+image.save("./yellow_cat_on_park_bench.png")
+```
+
+**Notes**:
+- Despite not being a dependency, we highly recommend you to install [xformers](https://github.com/facebookresearch/xformers) for memory efficient attention (better performance)
+- If you have low GPU RAM available, make sure to add a `pipe.enable_attention_slicing()` after sending it to `cuda` for less VRAM usage (to the cost of speed)
+
+**How it works:**
+`image`          | `mask_image`
+:-------------------------:|:-------------------------:|
+<img src="https://raw.githubusercontent.com/CompVis/latent-diffusion/main/data/inpainting_examples/overture-creations-5sI6fQgYIuo.png" alt="drawing" width="300"/> | <img src="https://raw.githubusercontent.com/CompVis/latent-diffusion/main/data/inpainting_examples/overture-creations-5sI6fQgYIuo_mask.png" alt="drawing" width="300"/>
+
+
+`prompt`          | `Output`
+:-------------------------:|:-------------------------:|
+<span style="position: relative;bottom: 150px;">Face of a yellow cat, high resolution, sitting on a park bench</span> | <img src="https://huggingface.co/datasets/patrickvonplaten/images/resolve/main/test.png" alt="drawing" width="300"/>
 
 # Uses
 
