@@ -14,7 +14,7 @@ This `stable-diffusion-2-inpainting` model is resumed from [stable-diffusion-2-b
 ![image](https://huggingface.co/stabilityai/stable-diffusion-2-inpainting/resolve/main/merged-leopards.png)
 
 - Use it with the [`stablediffusion`](https://github.com/Stability-AI/stablediffusion) repository: download the `512-inpainting-ema.ckpt` [here](https://huggingface.co/stabilityai/stable-diffusion-2-inpainting/resolve/main/512-inpainting-ema.ckpt).
-- Use it with 🧨 diffusers (https://huggingface.co/stabilityai/stable-diffusion-2-inpainting#examples)
+- Use it with 🧨 [`diffusers`](https://huggingface.co/stabilityai/stable-diffusion-2-inpainting#examples)
 
 ## Model Details
 - **Developed by:** Robin Rombach, Patrick Esser
