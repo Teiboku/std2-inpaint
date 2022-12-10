@@ -45,7 +45,7 @@ pip install --upgrade git+https://github.com/huggingface/diffusers.git transform
 ```python
 from diffusers import StableDiffusionInpaintPipeline
 pipe = StableDiffusionInpaintPipeline.from_pretrained(
-    "stable-diffusion-2-inpainting",
+    "stabilityai/stable-diffusion-2-inpainting",
     revision="fp16",
     torch_dtype=torch.float16,
 )
