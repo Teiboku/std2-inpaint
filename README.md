@@ -39,7 +39,7 @@ This `stable-diffusion-2-inpainting` model is resumed from [stable-diffusion-2-b
 Using the [🤗's Diffusers library](https://github.com/huggingface/diffusers) to run Stable Diffusion 2 inpainting in a simple and efficient manner.
 
 ```bash
-pip install --upgrade git+https://github.com/huggingface/diffusers.git transformers accelerate scipy
+pip install diffusers transformers accelerate scipy safetensors
 ```
 
 ```python
