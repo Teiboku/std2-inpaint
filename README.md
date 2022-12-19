@@ -46,7 +46,6 @@ pip install --upgrade git+https://github.com/huggingface/diffusers.git transform
 from diffusers import StableDiffusionInpaintPipeline
 pipe = StableDiffusionInpaintPipeline.from_pretrained(
     "stabilityai/stable-diffusion-2-inpainting",
-    revision="fp16",
     torch_dtype=torch.float16,
 )
 prompt = "Face of a yellow cat, high resolution, sitting on a park bench"
