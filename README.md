@@ -4,6 +4,10 @@ tags:
 - stable-diffusion
 - text-to-image
 inference: false
+language:
+- ar
+- en
+pipeline_tag: text-to-image
 ---
 
 # Stable Diffusion v2 Model Card
