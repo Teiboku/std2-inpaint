@@ -48,6 +48,7 @@ pipe = StableDiffusionInpaintPipeline.from_pretrained(
     "stabilityai/stable-diffusion-2-inpainting",
     torch_dtype=torch.float16,
 )
+pipe.to("cuda")
 prompt = "Face of a yellow cat, high resolution, sitting on a park bench"
 #image and mask_image should be PIL images.
 #The mask structure is white for inpainting and black for keeping as is
