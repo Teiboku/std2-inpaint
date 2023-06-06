@@ -2,7 +2,6 @@
 license: openrail++
 tags:
 - stable-diffusion
-- text-to-image
 inference: false
 ---
 
