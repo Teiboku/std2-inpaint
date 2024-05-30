@@ -18,7 +18,10 @@ This `stable-diffusion-2-inpainting` model is resumed from [stable-diffusion-2-b
 ## Model Details
 - **Developed by:** Robin Rombach, Patrick Esser
 - **Model type:** Diffusion-based text-to-image generation model
-- **Language(s):** English
+- **Language(s):** English1
+
+
+  
 - **License:** [CreativeML Open RAIL++-M License](https://huggingface.co/stabilityai/stable-diffusion-2/blob/main/LICENSE-MODEL)
 - **Model Description:** This is a model that can be used to generate and modify images based on text prompts. It is a [Latent Diffusion Model](https://arxiv.org/abs/2112.10752) that uses a fixed, pretrained text encoder ([OpenCLIP-ViT/H](https://github.com/mlfoundations/open_clip)).
 - **Resources for more information:** [GitHub Repository](https://github.com/Stability-AI/).
